@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Research | 3DXIM</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Public+Sans:wght@400;500;600;700&family=Martian+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .standby {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-family: var(--font-mono);
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            color: var(--amber);
+            margin-bottom: 22px;
+        }
+
+        .standby-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--amber);
+            box-shadow: 0 0 0 0 var(--amber-soft);
+            animation: pulse 2s ease-out infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 var(--amber-soft); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 176, 32, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 176, 32, 0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .standby-dot {
+                animation: none;
+            }
+        }
+
+        .research-panel {
+            border: 1px solid var(--line);
+            background: var(--bg-panel);
+            padding: 40px;
+        }
+
+        @media (max-width: 700px) {
+            .research-panel {
+                padding: 28px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .research-panel {
+                padding: 22px;
+            }
+        }
+
+        .research-panel p a {
+            color: var(--amber);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">
+        <a href="index.html">3DXIM</a>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">About</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="research.html" class="active">Research</a>
+        <a href="team.html">Team</a>
+        <a href="publications.html">Publications</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>Research</h1>
+
+    <p>
+        An overview of our research themes and ongoing projects.
+    </p>
+</div>
+
+<section>
+    <div class="research-panel">
+        <div class="standby">
+            <span class="standby-dot" aria-hidden="true"></span>
+            Standby
+        </div>
+
+        <h2 class="section-title">Coming soon</h2>
+
+        <p class="section-intro" style="margin-bottom: 0;">
+            We're preparing a detailed overview of our research themes and
+            ongoing projects. In the meantime, see our
+            <a href="publications.html">Publications</a> page for recent work.
+        </p>
+    </div>
+</section>
+
+<footer>
+    3DXIM — Advanced X-ray Imaging
+</footer>
+
+</body>
+</html>
