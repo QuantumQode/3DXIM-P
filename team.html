@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Team | 3DXIM</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Public+Sans:wght@400;500;600;700&family=Martian+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .member {
+            border: 1px solid var(--line);
+            background: var(--bg-panel);
+        }
+
+        .member .frame {
+            border: none;
+            background: none;
+            padding: 20px;
+        }
+
+        .member .frame::before {
+            inset: 20px;
+        }
+
+        .member-photo {
+            width: 100%;
+            max-width: 190px;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+            object-position: center 12%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .member-info {
+            padding: 20px 22px 24px;
+            text-align: center;
+        }
+
+        .member-info h3 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .position {
+            font-family: var(--font-mono);
+            text-transform: uppercase;
+            color: var(--amber);
+            font-size: 11px;
+            letter-spacing: 0.06em;
+            margin-bottom: 14px;
+        }
+
+        .member-info p {
+            color: var(--text-muted);
+            font-size: 15px;
+            text-align: left;
+        }
+
+        .member-details {
+            display: none;
+            margin-top: 12px;
+        }
+
+        .member.expanded .member-details {
+            display: block;
+        }
+
+        .read-more {
+            margin-top: 16px;
+            padding: 0;
+            border: none;
+            background: none;
+            font-family: var(--font-mono);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            font-size: 12px;
+            cursor: pointer;
+            transition: color 220ms var(--ease);
+        }
+
+        .read-more:hover {
+            color: var(--amber);
+        }
+
+        @media (max-width: 900px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 700px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">
+        <a href="index.html">3DXIM</a>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">About</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="research.html">Research</a>
+        <a href="team.html" class="active">Team</a>
+        <a href="publications.html">Publications</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>Our Team</h1>
+
+    <p>
+        Meet the researchers and specialists working across X-ray imaging,
+        computed tomography, image analysis, and materials characterization.
+    </p>
+</div>
+
+<section>
+
+    <h2 class="section-title">People</h2>
+
+    <p class="section-intro">
+        Our multidisciplinary team combines expertise in imaging, materials
+        science, engineering, data processing, and quantitative analysis.
+    </p>
+
+<div class="team-grid">
+
+        <!-- Miha Hren -->
+
+    <div class="member">
+
+        <div class="frame">
+            <img src="Miha.jpeg" alt="Miha Hren" class="member-photo">
+        </div>
+
+        <div class="member-info">
+
+            <h3>Miha Hren</h3>
+            <div class="position">Researcher</div>
+
+            <div class="member-details">
+
+                <p>
+                    Miha is a ...
+                </p>
+
+            </div>
+
+            <button class="read-more" aria-expanded="false" onclick="toggleBio(this)">Read more</button>
+
+
+
+        </div>
+
+    </div>
+
+
+    <!-- Lucia Mancini -->
+
+    <div class="member">
+
+        <div class="frame">
+            <img src="Lucia.jpeg" alt="Lucia Mancini" class="member-photo">
+        </div>
+
+        <div class="member-info">
+
+            <h3>Lucia Mancini</h3>
+            <div class="position">Senior Researcher</div>
+
+            <div class="member-details">
+
+                <p>
+                    Lucia is ....
+                </p>
+
+            </div>
+
+            <button class="read-more" aria-expanded="false" onclick="toggleBio(this)">Read more</button>
+
+
+
+        </div>
+
+    </div>
+
+
+    <!-- Lidija Korat -->
+
+    <div class="member">
+
+        <div class="frame">
+            <img src="Lidija.jpeg" alt="Lidija Korat" class="member-photo">
+        </div>
+
+        <div class="member-info">
+
+            <h3>Lidija Korat</h3>
+            <div class="position">Researcher</div>
+
+            <div class="member-details">
+
+                <p>
+                    Lidija is a ...
+                </p>
+
+            </div>
+
+            <button class="read-more" aria-expanded="false" onclick="toggleBio(this)">Read more</button>
+
+
+
+        </div>
+
+    </div>
+
+    <!-- Alenka Mauko Pranjić -->
+
+    <div class="member">
+
+        <div class="frame">
+            <img src="Alenka.jpeg" alt="Alenka Mauko Pranjić" class="member-photo">
+        </div>
+
+        <div class="member-info">
+
+            <h3>Alenka Mauko Pranjić</h3>
+            <div class="position">Senior Researcher</div>
+
+            <div class="member-details">
+
+                <p>
+                    Alenka is a ...
+                </p>
+
+            </div>
+
+            <button class="read-more" aria-expanded="false" onclick="toggleBio(this)">Read more</button>
+
+
+
+        </div>
+
+    </div>
+
+
+    <!-- Rožle Repič -->
+
+    <div class="member">
+
+        <div class="frame">
+            <img src="Rozle.jpeg" alt="Rožle Repič" class="member-photo">
+        </div>
+
+        <div class="member-info">
+
+            <h3>Rožle Repič</h3>
+            <div class="position">Researcher</div>
+
+            <div class="member-details">
+
+                <p>
+                    Rožle is a ...
+                </p>
+
+            </div>
+
+            <button class="read-more" aria-expanded="false" onclick="toggleBio(this)">Read more</button>
+
+
+
+        </div>
+
+    </div>
+
+
+    <!-- Tommaso Battiston -->
+
+    <div class="member">
+
+        <div class="frame">
+            <img src="Tommaso.jpeg" alt="Tommaso Battiston" class="member-photo">
+        </div>
+
+        <div class="member-info">
+
+            <h3>Tommaso Battiston</h3>
+            <div class="position">Researcher</div>
+
+            <div class="member-details">
+
+                <p>
+                    Tommaso is a ...
+                </p>
+
+            </div>
+
+            <button class="read-more" aria-expanded="false" onclick="toggleBio(this)">Read more</button>
+
+
+
+        </div>
+
+    </div>
+    <!-- Ekaterina Sokolova -->
+
+    <div class="member">
+
+        <div class="frame">
+            <img src="Ekaterina.jpeg" alt="Ekaterina Sokolova" class="member-photo">
+        </div>
+
+        <div class="member-info">
+
+            <h3>Ekaterina Sokolova</h3>
+            <div class="position">Doctoral Candidate</div>
+
+            <div class="member-details">
+
+                <p>
+                    Ekaterina is a PhD student with a background in archaeological sciences,
+                    specializing in the scientific study and conservation of cultural heritage
+                    materials. Her current research focuses on the optimization and
+                    characterization of sustainable materials for cultural heritage
+                    conservation, particularly for injection and additive manufacturing
+                    applications. She uses X-ray computed tomography as a non-destructive,
+                    quantitative technique to investigate internal structure, porosity,
+                    cracking, and material behaviour. Her research interests include
+                    archaeological and heritage materials, advanced X-ray characterization,
+                    3D imaging, sustainable conservation, and additive manufacturing for
+                    the restoration of cultural heritage objects.
+                </p>
+
+            </div>
+
+            <button class="read-more" aria-expanded="false" onclick="toggleBio(this)">Read more</button>
+
+
+
+        </div>
+
+    </div>
+
+
+    <!-- Amir Reza Zekavat -->
+
+    <div class="member">
+
+        <div class="frame">
+            <img src="Zekavat.jpeg" alt="Amir Reza Zekavat" class="member-photo">
+        </div>
+
+        <div class="member-info">
+
+            <h3>Amir Reza Zekavat</h3>
+            <div class="position">Postdoctoral Researcher</div>
+
+            <div class="member-details">
+
+                <p>
+                    Amir is an X-ray imaging engineer working at the Department of Materials,
+                    at Slovenian National Building and Civil Engineering Institute (ZAG),
+                    since May 2025. After completing a master's degree in mechanical
+                    engineering in Sweden in 2013, he completed his PhD studies at
+                    Örebro University, Sweden, in 2019. During his doctoral studies, he worked on dimensional metrology,
+                    surface characterization, and defect analysis of additively
+                    manufactured components using X-ray computed tomography (CT).
+                    Following his PhD, he worked as a Postdoctoral Research Associate
+                    at University College London (UCL), UK, from 2021 to 2023 in the
+                    Advanced X-ray Imaging (AXIm) group within the Department of Medical
+                    Physics and Biomedical Engineering. His research focused on
+                    state-of-the-art X-ray phase-contrast imaging (XPCI), including CT
+                    scanning, reconstruction, and analysis of 3D CT datasets.
+                </p>
+
+            </div>
+
+            <button class="read-more" aria-expanded="false" onclick="toggleBio(this)">Read more</button>
+
+
+
+        </div>
+
+    </div>
+
+
+    </div>
+
+</section>
+
+<footer>
+    3DXIM — Advanced X-ray Imaging
+</footer>
+<script>
+function toggleBio(button) {
+    const member = button.closest('.member');
+    member.classList.toggle('expanded');
+
+    const expanded = member.classList.contains('expanded');
+    button.setAttribute('aria-expanded', expanded);
+    button.textContent = expanded ? 'Read less' : 'Read more';
+}
+</script>
+</body>
+</html>
